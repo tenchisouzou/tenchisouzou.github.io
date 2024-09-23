@@ -29,6 +29,18 @@
       $(function () {
         $("#header").load("header.html");
       });
+      
+      const scroll24 = function () {
+        const Left24 = document
+          .getElementById("24")
+          .getBoundingClientRect().left;
+        const Top24 = document.getElementById("24").getBoundingClientRect().top;
+        window.scrollTo({
+          left: Left24,
+          top: Top24,
+          behavior: "smooth",
+        });
+      };
 
       const scroll23 = function () {
         const Left23 = document
@@ -90,17 +102,6 @@
         });
       };
 
-      const scroll18 = function () {
-        const Left18 = document
-          .getElementById("18")
-          .getBoundingClientRect().left;
-        const Top18 = document.getElementById("18").getBoundingClientRect().top;
-        window.scrollTo({
-          left: Left18,
-          top: Top18,
-          behavior: "smooth",
-        });
-      };
     </script>
   </head>
 
@@ -110,17 +111,28 @@
     <div class="activity-box">
       <div id="jump-button">
         <div class="jump-row">
+          <p onclick="scroll24()">2024年</p>
           <p onclick="scroll23()">2023年</p>
           <p onclick="scroll22()">2022年</p>
-          <p onclick="scroll21()">2021年</p>
         </div>
         <div class="jump-row">
+          <p onclick="scroll21()">2021年</p>
           <p onclick="scroll20()">2020年</p>
           <p onclick="scroll19()">2019年</p>
-          <p onclick="scroll18()">2018年</p>
         </div>
       </div>
       <div class="activity-block">
+        <h2 id="24">2024年</h2>
+
+        <li class="activity-title">01/08(金) 餅つき</li>
+        <p class="activity-text">
+          毎年恒例の餅つきです！杵と臼が重かった...
+        </p>
+        <div class="activity-img-block">
+          <img class="activity-img" src="img/240108-1.jpg" />
+          <img class="activity-img" src="img/240108-2.jpg" />
+        </div>
+
         <h2 id="23">2023年</h2>
 
         <li class="activity-title">12/18(月) 忘年会</li>
